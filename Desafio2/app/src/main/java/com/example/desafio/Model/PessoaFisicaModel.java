@@ -4,14 +4,14 @@ import java.util.Date;
 
 public class PessoaFisicaModel extends  PessoaModel {
 
-    private Date dataNascimento;
+    private String dataNascimento;
     private String cpf;
 
-    public Date getDataNascimento() {
+    public String getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
+    public void setDataNascimento(String dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 
@@ -23,13 +23,5 @@ public class PessoaFisicaModel extends  PessoaModel {
         this.cpf = cpf;
     }
 
-    public int getIdPessoaFisica() {
-        return idPessoaFisica;
-    }
 
-    public void setIdPessoaFisica(int idPessoaFisica) {
-        this.idPessoaFisica = idPessoaFisica;
-    }
-
-    private int idPessoaFisica;
 }

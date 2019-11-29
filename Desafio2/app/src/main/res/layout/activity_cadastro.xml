@@ -6,4 +6,102 @@
     android:layout_height="match_parent"
     tools:context=".CadastroActivity">
 
+    <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="298dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Nome completo"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextBairro"
+        android:layout_width="298dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Bairro:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCep" />
+
+    <EditText
+        android:id="@+id/editTextCpfCnpj"
+        android:layout_width="298dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="CPF:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextData" />
+
+    <EditText
+        android:id="@+id/editTextCep"
+        android:layout_width="298dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="CEP:"
+        android:inputType="textPostalAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCpfCnpj" />
+
+    <EditText
+        android:id="@+id/editTextData"
+        android:layout_width="298dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Data de Aniversario"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNome" />
+
+    <EditText
+        android:id="@+id/editTextUf"
+        android:layout_width="125dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="UF:"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBairro" />
+
+    <EditText
+        android:id="@+id/editTextNumero"
+        android:layout_width="150dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Número:"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toEndOf="@+id/editTextUf"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBairro" />
+
+    <Spinner
+        android:id="@+id/spinnerTipoEndereco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Tipo de endereço:"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="514dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

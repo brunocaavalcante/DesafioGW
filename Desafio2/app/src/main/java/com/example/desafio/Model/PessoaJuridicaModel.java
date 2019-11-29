@@ -6,15 +6,7 @@ public class PessoaJuridicaModel extends PessoaModel {
 
     private Date DataCriacao;
     private String cnpj;
-    private int id;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public Date getDataCriacao() {
         return DataCriacao;

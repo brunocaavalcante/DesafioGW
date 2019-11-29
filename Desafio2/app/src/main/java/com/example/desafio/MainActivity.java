@@ -7,15 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.desafio.dbHelper.ConexaoSQLite;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button btnPessoaJuridica;
     private Button btnPessoaFisica;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ConexaoSQLite con =  ConexaoSQLite.getInstancia(this);
 
         btnPessoaFisica = (Button) findViewById(R.id.btnCadPessoaFisica);
         btnPessoaJuridica = (Button) findViewById(R.id.btnCadPessoaJuridica);
