@@ -3,6 +3,7 @@ package com.example.desafio.DAO;
 import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.desafio.Model.Endereco;
 import com.example.desafio.Model.PessoaFisicaModel;
 import com.example.desafio.Model.PessoaJuridicaModel;
 import com.example.desafio.dbHelper.ConexaoSQLite;
@@ -14,7 +15,7 @@ public class PessoaDAO {
         this.con = con;
     }
 
-    public long insertPessoaFisica(PessoaFisicaModel pessoaFisicaModel){
+    public long insertPessoaFisica(PessoaFisicaModel pessoaFisicaModel, Endereco endereco){
         SQLiteDatabase db = con.getWritableDatabase();
 
         try {
@@ -32,7 +33,21 @@ public class PessoaDAO {
         return 0;
     }
 
-    /*public boolean insertPessoaJuridica(PessoaJuridicaModel pessoaJuridicaModel){
+    public long insertPessoaJuridica(PessoaJuridicaModel pessoaJuridicaModel,Endereco endereco){
+          SQLiteDatabase db = con.getWritableDatabase();
 
-    }*/
+                try {
+                    ContentValues values = new ContentValues();
+                    values.put("id",pessoaJuridicaModel.getId());
+                    values.put("cnpj",pessoaJuridicaModel.getCnpj());
+                    values.put("nome",pessoaJuridicaModel.getNome());
+                    values.put("data_criacao",pessoaJuridicaModel.getDataCriacao());
+
+                   return db.insert("usuario",null,values);
+
+                }catch (Exception e){
+
+                }
+                return 0;
+    }
 }

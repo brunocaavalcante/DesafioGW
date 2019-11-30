@@ -4,15 +4,15 @@ import java.util.Date;
 
 public class PessoaJuridicaModel extends PessoaModel {
 
-    private Date DataCriacao;
+    private String DataCriacao;
     private String cnpj;
 
 
-    public Date getDataCriacao() {
+    public String getDataCriacao() {
         return DataCriacao;
     }
 
-    public void setDataCriacao(Date dataCriacao) {
+    public void setDataCriacao(String dataCriacao) {
         DataCriacao = dataCriacao;
     }
 

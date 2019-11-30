@@ -35,8 +35,7 @@ public class ConexaoSQLite extends SQLiteOpenHelper {
                 "nome TEXT NOT NULL, " +
                 "cpf TEXT," +
                 "cnpj TEXT," +
-                "data_nascimento TEXT," +
-                "data_criacao TEXT)";
+                "data TEXT)";
 
         String tableEndereco= "CREATE TABLE IF NOT EXISTS endereco(" +
                 "id INTEGER PRIMARY KEY," +
