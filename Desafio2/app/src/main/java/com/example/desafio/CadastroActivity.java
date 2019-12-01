@@ -12,6 +12,7 @@ import com.example.desafio.Controller.PessoaController;
 import com.example.desafio.Model.Endereco;
 import com.example.desafio.Model.PessoaFisicaModel;
 import com.example.desafio.Model.PessoaJuridicaModel;
+import com.example.desafio.Service.ZipCodeListener;
 import com.example.desafio.dbHelper.ConexaoSQLite;
 
 import java.util.List;
@@ -46,6 +47,7 @@ public class CadastroActivity extends AppCompatActivity {
         txtNumero = findViewById(R.id.editTextNumero);
         txtUf = findViewById(R.id.editTextUf);
         txtComplemento = findViewById(R.id.editTextComplemento);
+        spnTipoEndereco = findViewById(R.id.spinnerTipoEndereco);
 
         Bundle extras = getIntent().getExtras();
         requestPessoa = extras!= null ? extras.getString("Pessoa"):"";
@@ -58,6 +60,9 @@ public class CadastroActivity extends AppCompatActivity {
         final PessoaJuridicaModel pessoaJuridicaModel = new PessoaJuridicaModel();
         final Endereco endereco = new Endereco();
         final PessoaController pessoaController = new PessoaController(con);
+
+        /*Eventos*/
+        txtCep.addTextChangedListener(new ZipCodeListener());
 
         btnCadastrarUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,5 +120,15 @@ public class CadastroActivity extends AppCompatActivity {
         }else{
             return true;
         }
+    }
+
+    public String getUrl(){
+        return "viacep.com.br/ws/"+txtCep.getText()+"/json/";
+    }
+
+    public void setDataViews(Endereco endereco){
+        txtComplemento.setText(endereco.getComplemento());
+        txtBairro.setText(endereco.getBairro());
+        R.array.states, endereco.getUf() );
     }
 }

@@ -3,7 +3,7 @@ package com.example.desafio.Model;
 public class Endereco {
     private String tipo;
     private String cep;
-    private String logradoro;
+    private String logradouro;
     private String complemento;
     private String bairro;
     private String uf;
@@ -26,12 +26,12 @@ public class Endereco {
         this.cep = cep;
     }
 
-    public String getLogradoro() {
-        return logradoro;
+    public String getLogradouro() {
+        return logradouro;
     }
 
-    public void setLogradoro(String logradoro) {
-        this.logradoro = logradoro;
+    public void setLogradouro(String logradoro) {
+        this.logradouro = logradoro;
     }
 
     public String getComplemento() {

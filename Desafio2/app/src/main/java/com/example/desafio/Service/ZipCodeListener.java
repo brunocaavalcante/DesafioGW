@@ -19,7 +19,8 @@ public class ZipCodeListener implements TextWatcher {
     public void afterTextChanged(Editable s) {
         String zipCode = s.toString();
         if(s.length() == 8){
-
+           AddressService addressService = new AddressService();
+           addressService.doInBackground(zipCode);
         }
     }
 }
