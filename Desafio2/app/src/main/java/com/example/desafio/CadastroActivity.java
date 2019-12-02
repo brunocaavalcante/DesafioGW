@@ -31,6 +31,7 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText txtCep;
     private EditText txtBairro;
     private EditText txtUf;
+    private EditText txtLogradouro;
     private EditText txtNumero;
 
     @Override
@@ -47,6 +48,7 @@ public class CadastroActivity extends AppCompatActivity {
         txtNumero = findViewById(R.id.editTextNumero);
         txtUf = findViewById(R.id.editTextUf);
         txtComplemento = findViewById(R.id.editTextComplemento);
+        txtLogradouro = findViewById(R.id.editTextLogradouro);
         spnTipoEndereco = findViewById(R.id.spinnerTipoEndereco);
 
         Bundle extras = getIntent().getExtras();
@@ -62,7 +64,7 @@ public class CadastroActivity extends AppCompatActivity {
         final PessoaController pessoaController = new PessoaController(con);
 
         /*Eventos*/
-        txtCep.addTextChangedListener(new ZipCodeListener());
+        txtCep.addTextChangedListener(new ZipCodeListener(this));
 
         btnCadastrarUser.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,6 +131,25 @@ public class CadastroActivity extends AppCompatActivity {
     public void setDataViews(Endereco endereco){
         txtComplemento.setText(endereco.getComplemento());
         txtBairro.setText(endereco.getBairro());
-        R.array.states, endereco.getUf() );
+        setSpinner(R.array.states, endereco.getUf());
+    }
+
+    public void lockFields(boolean isToLock){
+        txtBairro.setEnabled(!isToLock);
+        txtUf.setEnabled(!isToLock);
+        txtLogradouro.setEnabled(isToLock);
+    }
+
+    private void setSpinner(int arrayId, String data ){
+        String[] itens = getResources().getStringArray(arrayId);
+
+        for( int i = 0; i < itens.length; i++ ){
+
+            if( itens[i].endsWith( "("+data+")" ) ){
+                spnTipoEndereco.setSelection(i);
+                return;
+            }
+        }
+        spnTipoEndereco.setSelection( 0 );
     }
 }
