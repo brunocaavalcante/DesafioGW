@@ -31,14 +31,14 @@ public class ConexaoSQLite extends SQLiteOpenHelper {
         user.getNome();
 
         String tableUsuario = "CREATE TABLE IF NOT EXISTS usuario(" +
-                "id INTEGER PRIMARY KEY," +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "nome TEXT NOT NULL, " +
                 "cpf TEXT," +
                 "cnpj TEXT," +
                 "data TEXT)";
 
         String tableEndereco= "CREATE TABLE IF NOT EXISTS endereco(" +
-                "id INTEGER PRIMARY KEY," +
+                "id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "id_usuario INTEGER," +
                 "bairro TEXT," +
                 "cep TEXT," +

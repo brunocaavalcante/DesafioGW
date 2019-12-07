@@ -1,6 +1,5 @@
 package com.example.desafio.Model;
 
-import java.util.Date;
 
 public class PessoaFisicaModel extends  PessoaModel {
 
@@ -23,5 +22,16 @@ public class PessoaFisicaModel extends  PessoaModel {
         this.cpf = cpf;
     }
 
+    @Override
+    public String toString() {
+        return
 
+                "\nID: "+getId()+"\n"+
+                "Nome: " + getNome() + '\n' +
+                "Data Nascimento: " + dataNascimento + '\n' +
+                "CPF:" + cpf + '\n'+
+                "CEP: "+getEndereco().getCep()+"\n"+
+                "Bairro: "+getEndereco().getBairro() +'\n'+
+                "Lougradouro: "+getEndereco().getLogradouro();
+    }
 }

@@ -1,6 +1,6 @@
 package com.example.desafio.Model;
 
-public class Endereco {
+public class EnderecoModel {
     private String tipo;
     private String cep;
     private String logradouro;
@@ -8,7 +8,16 @@ public class Endereco {
     private String bairro;
     private String uf;
     private int numero;
-    private int id;
+    private long id;
+    private long id_user;
+
+    public long getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(long id_user) {
+        this.id_user = id_user;
+    }
 
     public String getTipo() {
         return tipo;
@@ -66,11 +75,12 @@ public class Endereco {
         this.numero = numero;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
+
 }

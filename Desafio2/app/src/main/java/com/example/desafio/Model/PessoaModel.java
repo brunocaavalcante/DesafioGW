@@ -3,7 +3,7 @@ package com.example.desafio.Model;
 public class PessoaModel {
     private int id;
     private String nome;
-    private Endereco endereco;
+    private EnderecoModel endereco;
 
     public String getNome() {
         return nome;
@@ -21,11 +21,11 @@ public class PessoaModel {
         this.nome = nome;
     }
 
-    public Endereco getEndereco() {
+    public EnderecoModel getEndereco() {
         return endereco;
     }
 
-    public void setEndereco(Endereco endereco) {
+    public void setEndereco(EnderecoModel endereco) {
         this.endereco = endereco;
     }
 }
