@@ -32,6 +32,6 @@ public class PessoaFisicaModel extends  PessoaModel {
                 "CPF:" + cpf + '\n'+
                 "CEP: "+getEndereco().getCep()+"\n"+
                 "Bairro: "+getEndereco().getBairro() +'\n'+
-                "Lougradouro: "+getEndereco().getLogradouro();
+                "Lougradouro: "+getEndereco().getLogradouro()+'\n';
     }
 }

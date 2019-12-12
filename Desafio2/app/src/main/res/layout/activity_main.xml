@@ -26,6 +26,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="60dp"
         android:text="Cadastro Pessoa Fisica"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,10 +38,23 @@
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
         android:text="CADASTRO PESSOA JURIDICA"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCadPessoaFisica" />
+
+    <Button
+        android:id="@+id/btnListUsuarios"
+        android:layout_width="377dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Listar Usuarios"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCadPessoaJuridica" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

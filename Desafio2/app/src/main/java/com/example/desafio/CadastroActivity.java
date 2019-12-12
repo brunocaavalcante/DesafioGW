@@ -172,10 +172,12 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     public void setDataViews(EnderecoModel endereco){
-        txtComplemento.setText(endereco.getComplemento());
-        txtBairro.setText(endereco.getBairro());
-        txtUf.setText(endereco.getUf());
-        txtLogradouro.setText(endereco.getLogradouro());
+        if(endereco != null){
+            txtComplemento.setText(endereco.getComplemento());
+            txtBairro.setText(endereco.getBairro());
+            txtUf.setText(endereco.getUf());
+            txtLogradouro.setText(endereco.getLogradouro());
+        }
     }
 
     /*Criando Mascaras para os campos de cadastro*/

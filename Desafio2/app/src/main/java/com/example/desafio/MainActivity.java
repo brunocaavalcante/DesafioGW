@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btnPessoaJuridica;
     private Button btnPessoaFisica;
+    private Button btnListUsuarios;
 
 
     @Override
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnPessoaFisica = (Button) findViewById(R.id.btnCadPessoaFisica);
         btnPessoaJuridica = (Button) findViewById(R.id.btnCadPessoaJuridica);
+        btnListUsuarios = (Button) findViewById(R.id.btnListUsuarios);
 
         btnPessoaFisica.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent it = new Intent(MainActivity.this, CadastroActivity.class);
                 it.putExtra("Pessoa", "Pessoa Juridica");
+                startActivity(it);
+            }
+        });
+
+        btnListUsuarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent it = new Intent(MainActivity.this,ListUserActivity.class);
                 startActivity(it);
             }
         });
